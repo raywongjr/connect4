@@ -5,6 +5,9 @@
 .Game {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  width: 360px;
+  margin: 0 auto;
 }
 
 .Game-Board {
@@ -14,6 +17,7 @@
   flex-direction: column;
   padding: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
 }
 
 .Game-Row {
@@ -60,6 +64,51 @@
 }
 .Game-Cell.animated::after {
   content: "×";
+}
+
+.Game-Replay-Button {
+  margin: 10px;
+  padding: 4px;
+  border-radius: 3px;
+  color: white;
+  background-color: red;
+  border-style: none;
+}
+
+.Game-Replay-Button:focus {
+  outline: none;
+}
+
+.Game-Replay-Button.game-over {
+  background-color: green;
+}
+
+.Game-Scoreboard {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.Game-Scoreboard table {
+  border: 1px solid #ccc;
+  border-spacing: 0;
+}
+
+.Game-Scoreboard table th,
+.Game-Scoreboard table td {
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.Game-Scoreboard table th:last-child,
+.Game-Scoreboard table td:last-child {
+  border-right: none;
+}
+
+.Game-Scoreboard tbody tr:last-child th,
+.Game-Scoreboard tbody tr:last-child td {
+  border-bottom: none;
 }
 
 @keyframes animated {

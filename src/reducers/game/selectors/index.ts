@@ -1,3 +1,3 @@
 export { getCurrentPlayer } from "./getCurrentPlayer";
-export { getBoard } from "./getBoard";
+export { getBoard, getScoreboard } from "./getBoard";
 export { getWinner } from "./getWinner";
